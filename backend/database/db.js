@@ -1,3 +1,3 @@
 module.exports = {
-    db: 'process.env.MONGODB_CONNECTION_STRING'
+    db: process.env.MONGODB_CONNECTION_STRING
   };
