@@ -56,7 +56,7 @@ export default class EditStudent extends Component {
       rollno: this.state.rollno
     };
 
-    axios.put('wss://jbmernstack.herokuapp.com:57827/ws/students/update-student/' + this.props.match.params.id, studentObject)
+    axios.put('/students/update-student/' + this.props.match.params.id, studentObject)
       .then((res) => {
         console.log(res.data)
         console.log('Student successfully updated')
