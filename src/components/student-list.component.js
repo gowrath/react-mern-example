@@ -14,7 +14,7 @@ export default class StudentList extends Component {
   }
 
   componentDidMount() {
-    axios.get('process.env.PORT/students/')
+    axios.get('/students/')
       .then(res => {
         this.setState({
           students: res.data
