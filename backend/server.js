@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGODB_CONNECTION_STRING, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => {
-  console.log('Database sucessfully connected!')
+  console.log('Database successfully connected!')
 },
   error => {
     console.log('Could not connect to database : ' + error)
