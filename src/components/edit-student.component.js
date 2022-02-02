@@ -22,7 +22,7 @@ export default class EditStudent extends Component {
   }
 
   componentDidMount() {
-    axios.get('/students/edit-student/' + this.props.match.params.id)
+    axios.get('http://localhost:5000/students/edit-student/' + this.props.match.params.id)
       .then(res => {
         this.setState({
           name: res.data.name,
