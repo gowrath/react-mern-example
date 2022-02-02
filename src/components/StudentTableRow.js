@@ -11,7 +11,7 @@ export default class StudentTableRow extends Component {
     }
 
     deleteStudent() {
-        axios.delete('process.env.PORT/students/delete-student/' + this.props.obj._id)
+        axios.delete('wss://jbmernstack.herokuapp.com:57827/ws/students/delete-student/' + this.props.obj._id)
             .then((res) => {
                 console.log('Student successfully deleted!')
             }).catch((error) => {
