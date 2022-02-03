@@ -5,14 +5,15 @@ let bodyParser = require('body-parser');
 
 require("dotenv").config()
 
-
+const uri = "mongodb+srv://mern:database@cluster0.pt6ch.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 // Express Route
-const studentRoute = require('../backend/routes/student.route')
+const studentRoute = require('../backend/routes/student.route');
+const { MongoClient } = require('mongodb');
 
 // Connecting mongoDB Database
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_CONNECTION_STRING, {
+mongoose.connect(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => {
@@ -22,7 +23,6 @@ mongoose.connect(process.env.MONGODB_CONNECTION_STRING, {
     console.log('Could not connect to database : ' + error)
   }
 )
-
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
