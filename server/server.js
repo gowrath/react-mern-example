@@ -9,7 +9,7 @@ const uri = "mongodb+srv://mern:database@cluster0.pt6ch.mongodb.net/myFirstDatab
 const path = require("path")
 
 // Express Route
-const studentRoute = require('../backend/routes/student.route');
+const studentRoute = require('./routes/student.route');
 const { MongoClient } = require('mongodb');
 
 // Connecting mongoDB Database
@@ -31,14 +31,14 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cors());
 app.use('/students', studentRoute)
-app.use(express.static(path.join(__dirname, "client", "build")))
+app.use(express.static(path.join(__dirname, "build")))
 
 
 // PORT
 const port = process.env.PORT || 5000;
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 
