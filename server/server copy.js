@@ -4,9 +4,9 @@ let cors = require('cors');
 let bodyParser = require('body-parser');
 
 require("dotenv").config()
-const path = require("path")
 
 const uri = "mongodb+srv://mern:database@cluster0.pt6ch.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const path = require("path")
 
 // Express Route
 const studentRoute = require('./routes/student.route');
@@ -31,14 +31,14 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cors());
 app.use('/students', studentRoute)
-app.use(express.static(path.join(__dirname, "../build")))
+app.use(express.static(path.join(__dirname, "build")))
 
 
 // PORT
 const port = process.env.PORT || 5000;
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../build", "index.html"));
+  res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 
