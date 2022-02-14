@@ -7,7 +7,7 @@ This is a React application written in class components with React Router v5. It
 
 It uses MongoDB Atlas for a cloud database. 
 
-The APIs used are Axios, CORS, Express.
+I used Axios to handle POST and GET and SET requests. Axios makes it easy to send asynchronous HTTP requests to REST endpoints and perform CRUD operations.
 
 It is hosted on Firebase:
 
