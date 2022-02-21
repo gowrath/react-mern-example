@@ -9,6 +9,8 @@ It uses MongoDB Atlas for a cloud database, making deployment easier.
 
 I used Axios to handle POST and GET and SET requests. Axios makes it easy to send asynchronous HTTP requests to REST endpoints and perform CRUD operations.
 
+Node + Express is my middleware/server. I have it running on Heroku.
+
 It is hosted on Firebase:
 
 https://jbmernstack.web.app
