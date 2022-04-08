@@ -14,3 +14,7 @@ Node + Express is my middleware/server. I have it running on Heroku.
 It is hosted on Firebase:
 
 https://jbmernstack.web.app
+
+Thank you,
+
+John
